@@ -8,13 +8,17 @@ public class Barca{
     public static void main(String[] args) {
 		int numeroAleatorio=generarNumeroAleatorio();
 		int tiempoAleatorio=generarTiempoAleatorio();
-		Thread.sleep(tiempoAleatorio);
+		try {
+			Thread.sleep(tiempoAleatorio);
+		} catch (InterruptedException e) {
+			System.out.println(e);
+		}
 		System.out.println(numeroAleatorio);
 	}
-	private int generarNumeroAleatorio(){
+	private static int generarNumeroAleatorio(){
 		return (int) (Math.random() * 100);
 	}
-	private int generarTiempoAleatorio(){
+	private static int generarTiempoAleatorio(){
 		return (int) ((Math.random() * 4000)+2000);
 	}
 }

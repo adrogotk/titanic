@@ -3,9 +3,9 @@ package es.etg.psp.titanic;
 import java.io.*;
 import java.lang.*;
 
-import es.etg.psp.dam.io.FicheroRead;
-import es.etg.psp.dam.io.FicheroWrite;
-import es.etg.psp.recursos.io.FicheroWriterMD;
+import es.etg.psp.titanic.data.*;
+import es.etg.psp.titanic.rescate.*;
+
 
 public class App {
 
@@ -13,8 +13,12 @@ public class App {
 			Titanic t=new Titanic();
 			String contenido= t.ejecutar();
 			Imprimible informe= t.imprimir(contenido);
-			System.out.println(informe.getTitulo());
-			System.out.println(informe.getContenido());
+			String titulo=informe.getTitulo();
+			System.out.println(" 5: " + titulo);
+			String contenidoPantalla=informe.getContenidoString();
+			System.out.println(contenidoPantalla);
+			System.exit(0);
+	}
 	}
 
 

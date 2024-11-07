@@ -14,7 +14,7 @@ public class App {
 			String contenido= t.ejecutar();
 			Imprimible informe= t.imprimir(contenido);
 			String titulo=informe.getTitulo();
-			System.out.println(" 5: " + titulo);
+			System.out.println(titulo);
 			String contenidoPantalla=informe.getContenidoString();
 			System.out.println(contenidoPantalla);
 			System.exit(0);
